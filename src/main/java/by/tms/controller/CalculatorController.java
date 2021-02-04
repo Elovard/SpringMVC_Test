@@ -1,4 +1,4 @@
-package by.tms.service;
+package by.tms.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,7 +9,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping(path = "/calc")
-public class Calculator {
+public class CalculatorController {
     List<Double> results = new ArrayList<>();
 
     @GetMapping
