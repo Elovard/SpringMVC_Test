@@ -1,5 +1,6 @@
 package by.tms.controller;
 
+import by.tms.service.InMemoryHistoryStorage;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +11,8 @@ import java.util.List;
 @Controller
 @RequestMapping(path = "/calc")
 public class CalculatorController {
-    List<Double> results = new ArrayList<>();
+    private final InMemoryHistoryStorage historyStorage = new InMemoryHistoryStorage();
+
 
     @GetMapping
     public String calculator() {
@@ -23,25 +25,27 @@ public class CalculatorController {
         switch (operation) {
             case "sum":
                 result=sum(num1, num2);
-                results.add(result);
+                historyStorage.save(result);
                 break;
             case "minus":
                 result=minus(num1, num2);
-                results.add(result);
+                historyStorage.save(result);
                 break;
             case "div":
                 result=div(num1, num2);
-                results.add(result);
+                historyStorage.save(result);
                 break;
             case "multiply":
                 result=multiply(num1, num2);
-                results.add(result);
+                historyStorage.save(result);
                 break;
 
         }
         model.addAttribute("result", result);
         return "calculator";
     }
+
+
 
 
 

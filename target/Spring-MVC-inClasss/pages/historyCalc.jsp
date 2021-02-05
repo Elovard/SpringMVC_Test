@@ -5,6 +5,10 @@
     <title>Title</title>
 </head>
 <body>
+<a href="/calc">Calculator</a>
+<br>
+<a href="/history">History</a>
+<br>
 <h3>Your history:</h3>
 <div class="container">
     <ul>
