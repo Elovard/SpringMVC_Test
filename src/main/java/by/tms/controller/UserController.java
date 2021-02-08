@@ -2,6 +2,7 @@ package by.tms.controller;
 
 import by.tms.entity.User;
 import by.tms.service.InMemoryUserStorage;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,9 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping(path = "/user")
 public class UserController {
-    private final InMemoryUserStorage inMemoryUserStorage = new InMemoryUserStorage();
+
+    @Autowired
+    private InMemoryUserStorage inMemoryUserStorage;
 
     @GetMapping(path = "/reg")
     public ModelAndView getRegPage(ModelAndView modelAndView){

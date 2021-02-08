@@ -1,12 +1,14 @@
 package by.tms.service;
 
 import by.tms.entity.User;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class InMemoryUserStorage {
-    private static List<User> users = new ArrayList<>();
+    private List<User> users = new ArrayList<>();
 
     public void saveUser(User user){
         users.add(user);
