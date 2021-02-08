@@ -19,6 +19,10 @@ public class CalculatorController {
         return "calculator";
     }
 
+    // public ModelAndView(ModelAndView mdv){  - аналогия выше
+    // mdv.setViewName("calc");
+    // return mdv;
+
     @PostMapping
     public String calculator(double num1, double num2, String operation, Model model) {
         double result = 0.0;

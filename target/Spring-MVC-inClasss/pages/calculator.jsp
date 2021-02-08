@@ -4,10 +4,7 @@
     <title>Calculator</title>
 </head>
 <body>
-<a href="/calc">Calculator</a>
-<br>
-<a href="/history">History</a>
-<br>
+<jsp:include page="_header.jsp"/>
 <form action="/calc" method="post">
     <input type="number" name="num1" value="num1">
     <input type="number" name="num2" value="num2">

@@ -21,5 +21,11 @@ public class IndexController {
         model.addAttribute("name", name);
         return "index";
     }
+
+
+    // public ModelAndView index (ModelAndView modelandview) {  - аналогия вышеуказанного метода
+    // modelandview.addObject("name", name); - добавляет аттрибуты
+    // modelandview.setViewName("index") - показывает страницу
+    // return modelandview }
 }
 

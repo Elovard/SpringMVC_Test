@@ -4,6 +4,7 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Hello world! Name ${name}</h1>
+<jsp:include page="_header.jsp"/>
+<h1>Hello there, ${name}</h1>
 </body>
 </html>

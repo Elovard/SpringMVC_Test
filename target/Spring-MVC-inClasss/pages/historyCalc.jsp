@@ -5,10 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<a href="/calc">Calculator</a>
-<br>
-<a href="/history">History</a>
-<br>
+<jsp:include page="_header.jsp"/>
 <h3>Your history:</h3>
 <div class="container">
     <ul>

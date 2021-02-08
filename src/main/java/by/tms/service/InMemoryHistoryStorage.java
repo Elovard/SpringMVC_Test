@@ -13,4 +13,11 @@ public class InMemoryHistoryStorage {
     public List<Double> getResults(){
         return new ArrayList<>(results);
     }
+
 }
+
+// user 3 парамами (консутруктор один со всеми парамами, другой без айди парама)
+// user по аналогии с operation создаем
+
+
+// postMapping (httpSession) ${session.)
